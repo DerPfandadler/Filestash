@@ -1,23 +1,20 @@
-# Filestash with OnlyOffice Home Assistant Addon
+# Filestash Home Assistant Add-on
 
-This add-on integrates Filestash, a web-based file manager, with OnlyOffice Document Server for in-browser document editing.
+![Logo](icon.png)
 
-## Installation
+Filestash is a powerful, web-based file manager that integrates seamlessly with your Home Assistant setup. This add-on allows you to manage your files, access cloud storage services, and edit documents directly from your Home Assistant interface.
 
-1. Add this repository to your Home Assistant.
-2. Navigate to the Add-on Store in Home Assistant.
-3. Install the "Filestash with OnlyOffice" add-on.
+## Key Features
 
-## Configuration
+- **File Management**: Easily upload, download, and organize files within your Home Assistant environment.
+- **Cloud Integration**: Connect to popular cloud storage services like Google Drive and Dropbox.
+- **Document Editing**: Integrated OnlyOffice Document Server provides in-browser editing of documents, spreadsheets, and presentations.
+- **User-Friendly Interface**: Access your files and documents through a clean and intuitive web interface.
 
-- **application_url**: The base URL for accessing Filestash.
-- **gdrive_client_id**: Your Google Drive Client ID for integration.
-- **gdrive_client_secret**: Your Google Drive Client Secret.
-- **dropbox_client_id**: Your Dropbox Client ID.
-- **onlyoffice_url**: The URL where OnlyOffice Document Server will be accessed.
-- **filestash_port**: The port on which Filestash will run (default: 8334).
-- **onlyoffice_port**: The port on which OnlyOffice will run (default: 8088).
+## Why Use Filestash?
 
-## Usage
+Filestash is designed for users who need a robust file management solution integrated directly into their Home Assistant setup. Whether you're managing local files or accessing cloud storage, Filestash offers a streamlined experience that keeps everything in one place.
 
-After installation, start the add-on and access Filestash at `http://[YOUR_HA_IP]:8334`. OnlyOffice will be accessible at `http://[YOUR_HA_IP]:8088`.
+## Learn More
+
+For detailed installation and configuration instructions, please refer to the [documentation](docs.md).

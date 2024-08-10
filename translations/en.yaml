@@ -1,0 +1,29 @@
+title: "Filestash"
+config:
+  application_url:
+    name: "Application URL"
+    description: "The base URL where Filestash will be accessible. Leave empty to use the default."
+  gdrive_client_id:
+    name: "Google Drive Client ID"
+    description: "Your Google Drive Client ID for cloud storage integration."
+  gdrive_client_secret:
+    name: "Google Drive Client Secret"
+    description: "Your Google Drive Client Secret for cloud storage integration."
+  dropbox_client_id:
+    name: "Dropbox Client ID"
+    description: "Your Dropbox Client ID for cloud storage integration."
+  onlyoffice_url:
+    name: "OnlyOffice URL"
+    description: "The URL where the OnlyOffice Document Server will be accessible."
+  filestash_port:
+    name: "Filestash Port"
+    description: "The port on which Filestash will run. Default is 8334."
+  onlyoffice_port:
+    name: "OnlyOffice Port"
+    description: "The port on which OnlyOffice will run. Default is 8088."
+
+description: |
+  Filestash is a web-based file manager that integrates with the OnlyOffice Document Server for in-browser document editing.
+
+long_description: |
+  Filestash is a powerful file manager designed to integrate seamlessly with Home Assistant. It allows you to manage files, connect to cloud storage services like Google Drive and Dropbox, and edit documents using the OnlyOffice Document Server—all from within Home Assistant.
