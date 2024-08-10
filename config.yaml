@@ -1,5 +1,5 @@
 name: Filestash
-version: "1.0"
+version: "dev"
 slug: filestash
 description: "Filestash file manager with integrated OnlyOffice Document Server"
 url: https://github.com/DerPfandadler/filestash
@@ -14,24 +14,23 @@ ports:
     description: "Port for Filestash web interface"
   - port: 8088/tcp
     description: "Port for OnlyOffice Document Server"
-map:
-  - config:rw
-  - ssl:rw
-  - addons:rw
-  - backup:rw
-  - share:rw
-  - filestash_data:/app/data/state
-environment:
-  - name: APPLICATION_URL
-    value: ""
-  - name: GDRIVE_CLIENT_ID
-    value: ""
-  - name: GDRIVE_CLIENT_SECRET
-    value: ""
-  - name: DROPBOX_CLIENT_ID
-    value: ""
-  - name: ONLYOFFICE_URL
-    value: "http://localhost:8088"
+init: false
+options:
+  application_url: ""
+  gdrive_client_id: ""
+  gdrive_client_secret: ""
+  dropbox_client_id: ""
+  onlyoffice_url: "http://localhost:8088"
+  filestash_port: 8334
+  onlyoffice_port: 8088
+schema:
+  application_url: str
+  gdrive_client_id: str
+  gdrive_client_secret: str
+  dropbox_client_id: str
+  onlyoffice_url: str
+  filestash_port: int
+  onlyoffice_port: int
 webui: "http://[HOST]:[PORT:8334]"
 host_network: false
 ingress: false
