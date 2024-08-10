@@ -1,29 +1,5 @@
-name: Filestash
-version: dev
-slug: filestash
 description: Filestash file manager
 url: https://github.com/DerPfandadler/filestash
 arch:
+  - armv7
   - aarch64
-startup: services
-boot: auto
-ports:
-  8334/tcp: 8334
-map:
-  - config:rw
-  - ssl
-options:
-  application_url: ''
-  gdrive_client_id: ''
-  gdrive_client_secret: ''
-  dropbox_client_id: ''
-schema:
-  application_url: str
-  gdrive_client_id: str
-  gdrive_client_secret: str
-  dropbox_client_id: str
-environment:
-  - APPLICATION_URL={{ options.application_url }}
-  - GDRIVE_CLIENT_ID={{ options.gdrive_client_id }}
-  - GDRIVE_CLIENT_SECRET={{ options.gdrive_client_secret }}
-  - DROPBOX_CLIENT_ID={{ options.dropbox_client_id }}
