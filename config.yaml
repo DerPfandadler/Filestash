@@ -1,38 +1,29 @@
 name: Filestash
-version: "dev"
+version: dev
 slug: filestash
-description: "Filestash file manager with integrated OnlyOffice Document Server"
-url: https://github.com/DerPfandadler/filestash
+description: Filestash file manager
+url: https://github.com/your-repo/filestash-addon
 arch:
   - aarch64
-  - armv7
-startup: "services"
-boot: "auto"
+startup: services
+boot: auto
 ports:
-  "8334/tcp": "Port for Filestash web interface"
-  "8088/tcp": "Port for OnlyOffice Document Server"
+  8334/tcp: 8334
 map:
   - config:rw
-  - ssl:rw
-  - addons:rw
-  - backup:rw
-  - share:rw
-  - filestash_data:/app/data/state
+  - ssl
+options:
+  application_url: ''
+  gdrive_client_id: ''
+  gdrive_client_secret: ''
+  dropbox_client_id: ''
+schema:
+  application_url: str
+  gdrive_client_id: str
+  gdrive_client_secret: str
+  dropbox_client_id: str
 environment:
-  APPLICATION_URL: ""
-  GDRIVE_CLIENT_ID: ""
-  GDRIVE_CLIENT_SECRET: ""
-  DROPBOX_CLIENT_ID: ""
-  ONLYOFFICE_URL: "http://localhost:8088"
-webui: "http://[HOST]:[PORT:8334]"
-host_network: false
-ingress: false
-ingress_port: 8099
-ingress_entry: "http://[HOST]:[PORT:8099]"
-init: false
-hassio_api: true
-hassio_role: "default"
-homeassistant_api: true
-privileged: []
-apparmor: true
-timeout: 60
+  - APPLICATION_URL={{ options.application_url }}
+  - GDRIVE_CLIENT_ID={{ options.gdrive_client_id }}
+  - GDRIVE_CLIENT_SECRET={{ options.gdrive_client_secret }}
+  - DROPBOX_CLIENT_ID={{ options.dropbox_client_id }}
