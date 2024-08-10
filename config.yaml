@@ -2,7 +2,7 @@ name: Filestash
 version: "dev"
 slug: filestash
 description: "Filestash file manager with integrated OnlyOffice Document Server"
-url: https://github.com/DerPfandadler/My-Addons
+url: https://github.com/DerPfandadler/filestash
 arch:
   - aarch64
   - amd64
