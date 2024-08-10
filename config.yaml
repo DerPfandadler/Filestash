@@ -23,7 +23,7 @@ schema:
   gdrive_client_secret: str
   dropbox_client_id: str
 environment:
-  - APPLICATION_URL={{ options.application_url }}
-  - GDRIVE_CLIENT_ID={{ options.gdrive_client_id }}
-  - GDRIVE_CLIENT_SECRET={{ options.gdrive_client_secret }}
-  - DROPBOX_CLIENT_ID={{ options.dropbox_client_id }}
+  APPLICATION_URL: '{{ options.application_url }}'
+  GDRIVE_CLIENT_ID: '{{ options.gdrive_client_id }}'
+  GDRIVE_CLIENT_SECRET: '{{ options.gdrive_client_secret }}'
+  DROPBOX_CLIENT_ID: '{{ options.dropbox_client_id }}'
